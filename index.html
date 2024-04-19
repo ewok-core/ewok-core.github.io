@@ -1,1 +1,276 @@
-hello world
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Elements of World Knowledge (EWoK): A cognition-inspired framework for evaluating basic world knowledge in language models">
+  <meta name="keywords" content="EWoK">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EWoK: Elements of World Knowledge</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href=".">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+      <!-- <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          External
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://quest.mit.edu/research/missions/language">
+            MIT Quest for Intelligence
+          </a>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">🌎 Elements of World Knowledge (EWoK): A cognition-inspired framework for evaluating basic world knowledge in language models</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://anna-ivanova.net/">Anna A Ivanova</a>*<sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://aalok-sathe.gitlab.io/">Aalok Sathe</a>*<sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://benlipkin.github.io/">Benjamin Lipkin</a>*<sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="">Setayesh Radkani</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://thomashikaru.github.io/">Thomas H Clark</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://ckauf.com/">Carina Kauf</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://jennhu.github.io/">Jennifer Hu</a><sup>3</sup>
+            </span>
+            <span class="author-block">
+              <a href="">Pramod RT</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.gabegrand.com/">Gabriel Grand</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.mit.edu/~vpaulun/index.html">Vivian Paulun</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://ryskina.github.io/">Maria Ryskina</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://ekinakyurek.github.io/">Ekin Akyurek</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="">Unnathi Kumar</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://cpl.mit.edu/">Roger Levy</a><sup>2</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://evlab.mit.edu/">Evelina Fedorenko</a><sup>2</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://cocosci.mit.edu/">Josh Tenenbaum</a><sup>2</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://ktilana.wixsite.com/leshem-choshen">Leshem Choshen</a><sup>2</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://lingo.csail.mit.edu/">Jacob Andreas</a><sup>2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Georgia Tech,</span>
+            <span class="author-block"><sup>2</sup>MIT,</span>
+            <span class="author-block"><sup>3</sup>Harvard University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <!-- Arxiv Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths"> <!-- is-four-fifths -->
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Add abstract here.
+          </p>
+          <p>
+            Add overview figure somewhere here as well?
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- TODO. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths"> <!-- is-five-fifths -->
+        <h2 class="title is-3">Other Section</h2>
+        <div class="content has-text-justified">
+          <p>
+            This is another section. We can add more sections as needed. I can add text, images, videos, etc.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ TODO. -->
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{ivanova2024elements,
+  author    = {Ivanova, Anna and Sathe, Aalok and Lipkin, Benjamin and Radkani, Setayesh and Clark, Thomas H and Kauf, Carina and Hu, Jennifer and RT, Pramod and Grand, Gabriel and Paulun, Vivian and Ryskina, Maria and Akyurek, Ekin and Kumar, Unnathi and Levy, Roger and Fedorenko, Evelina and Tenenbaum, Josh and Choshen, Leshem and Andreas, Jacob},
+  title     = {Elements of World Knowledge (EWoK): A cognition-inspired framework for evaluating basic world knowledge in language models},
+  journal   = {arXiv},
+  year      = {2024},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
