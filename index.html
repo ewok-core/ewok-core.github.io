@@ -33,6 +33,14 @@
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
 
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/default.min.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
+
+  <!-- and it's easy to individually load additional languages -->
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/languages/go.min.js"></script>
+
+  <script>hljs.highlightAll();</script>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
@@ -88,6 +96,7 @@
               <span class="author-block">
                 <a href="https://benlipkin.github.io/">Benjamin Lipkin</a>*<sup>2</sup>,
               </span>
+              <!-- <br> -->
               <span class="author-block">
                 <a href="">Unnathi Kumar</a><sup>1</sup>,
               </span>
@@ -100,6 +109,7 @@
               <span class="author-block">
                 <a href="https://ckauf.com/">Carina Kauf</a><sup>2</sup>,
               </span>
+              <!-- <br> -->
               <span class="author-block">
                 <a href="https://jennhu.github.io/">Jennifer Hu</a><sup>3</sup>,
               </span>
@@ -112,11 +122,12 @@
               <span class="author-block">
                 <a href="https://www.mit.edu/~vpaulun/index.html">Vivian Paulun</a><sup>2</sup>,
               </span>
+              <!-- <br> -->
               <span class="author-block">
                 <a href="https://ryskina.github.io/">Maria Ryskina</a><sup>2</sup>,
               </span>
               <span class="author-block">
-                <a href="https://ekinakyurek.github.io/">Ekin Akyurek</a><sup>2</sup>,
+                <a href="https://ekinakyurek.github.io/">Ekin Akyürek</a><sup>2</sup>,
               </span>
               <span class="author-block">
                 <a href="https://wilcoxeg.github.io/">Ethan Wilcox</a><sup>4</sup>,
@@ -127,6 +138,7 @@
               <span class="author-block">
                 <a href="https://ktilana.wixsite.com/leshem-choshen">Leshem Choshen</a><sup>6</sup>,
               </span>
+              <!-- <br> -->
               <span class="author-block">
                 <a href="http://cpl.mit.edu/">Roger Levy</a><sup>2</sup>,
               </span>
@@ -144,9 +156,9 @@
             <div class="is-size-5 publication-authors">
               <span class="author-block"><sup>1</sup>Georgia Tech,</span>
               <span class="author-block"><sup>2</sup>MIT,</span>
-              <span class="author-block"><sup>3</sup>Harvard University</span>
-              <span class="author-block"><sup>4</sup>ETH Zurich</span>
-              <span class="author-block"><sup>5</sup>Wellesley College</span>
+              <span class="author-block"><sup>3</sup>Harvard University,</span>
+              <span class="author-block"><sup>4</sup>ETH Zürich,</span>
+              <span class="author-block"><sup>5</sup>Wellesley College,</span>
               <span class="author-block"><sup>6</sup>MIT-IBM Watson AI</span>
             </div>
 
@@ -177,7 +189,7 @@
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code</span>
+                    <span>Replicate our results 🔁</span>
                   </a>
                 </span>
                 <!-- Code Link. -->
@@ -185,8 +197,9 @@
                   <a href="https://github.com/ewok-core/ewok" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
+
                     </span>
-                    <span>EWoK framework</span>
+                    <span>EWoK framework 🐨</span>
                   </a>
                 </span>
                 <!-- Dataset Link. -->
@@ -194,9 +207,10 @@
                   <a href="https://huggingface.co/datasets/ewok-core/EWoK-core-1.0"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
-                      <i class="far fa-images"></i>
+                      🤗
+                      <!-- <i class="far fa-images"></i> -->
                     </span>
-                    <span>Data</span>
+                    <span> Dataset</span>
                   </a>
               </div>
 
@@ -235,10 +249,10 @@
               can be flexibly filled in, enabling easy
               generation of multiple controlled datasets.
               We then introduce EWOK-CORE-1.0, a
-              dataset of 4,400 items covering 11 world
+              dataset of 4,374 items covering 11 world
               knowledge domains. We evaluate the
               performance of 20 open-weights large
-              language models (ranging from 1.3B-70B
+              language models (ranging from 1.3B--70B
               parameters) across a battery of evaluation
               paradigms along with a human norming
               study comprising 12,480 measurements.
@@ -251,11 +265,150 @@
               world modeling capabilities.
             </p>
           </div>
+
         </div>
       </div>
       <!--/ Abstract. -->
     </div>
   </section>
+
+  <div class="content has-text-centered">
+    <img src="static/images/ewok-elements.jpeg"
+      alt="image of a 3D rendering of an EWoK pondering the elements of world knowledge; generated usinghttps://huggingface.co/ehristoforu/dalle-3-xl-v2 "
+      style="max-width: 30%; height: auto; border-radius: 3%;">
+  </div>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- new section -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths"> <!-- is-five-fifths -->
+          <h2 class="title is-3">From Elements to World Models</h2>
+
+          <div class="content has-text-justified">
+            <div class="column">
+              <p>
+                For an intelligent agent to interact with the world, it needs to be able to construct,
+                maintain, and update internal world models (in cognitive science, variants of such
+                world models are also known as mental models or situation models). The extent to
+                which LLMs possess and use internal world models is subject to ongoing investigation.
+                The EWoK framework offers an opportunity to combine individual elements of world
+                knowledge to flexibly construct multi-step scenarios for evaluating world modeling
+                capabilities in LLMs, within and across physical and social knowledge domains.
+
+                Our framework targets specific cognitive concepts (or concept pairs, such as
+                friend/enemy). Concept knowledge is not limited to definitions, but can be used
+                productively across a wide range of scenarios. Thus concepts leveraged in context
+                are the first-class object of the EWoK framework, as opposed to individual
+                sentences or facts. This approach stands in contrast to many NLP benchmarks, which
+                often aim to evaluate knowledge based on individual items, or to develop
+                sophisticated tasks that require drawing on many concepts simultaneously.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    <!--/ TODO. -->
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- new section -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths"> <!-- is-five-fifths -->
+          <h2 class="title is-3">Concepts, Domains, Contexts</h2>
+          <div class="content has-text-justified">
+            <img src="static/images/overview.svg" alt="">
+            <p>
+              EWoK is a flexible framework for evaluating aspects of “world modeling” in language
+              models. Models must use their knowledge of concepts to match a target text with a
+              plausible/implausible context.
+
+              Each concept is associated with several items that test knowledge of the concept
+              (often by contrasting it with another concept). Items are created in a flexible yet
+              controlled manner using the EWoK dataset generation procedure. At the core of the
+              framework, we have atomic units and combination rules that, subject to constraints,
+              lead to the generation of templates which are then populated with fillers—this leads
+              to generating many more carefully-controlled items than a single-step template-filling
+              approach could generate.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ TODO. -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- new section -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths"> <!-- is-five-fifths -->
+          <h2 class="title is-3">EWoK Requires Context Sensitivity</h2>
+          <div class="content has-text-centered">
+            <div class="columns is-vcentered ">
+              <div class="column is-two-fifths">
+                <img src="static/images/setup.svg" alt="" style="width: 80%;">
+              </div>
+              <div class="column is-three-fifths">
+                <div class="content has-text-justified">
+                  <p>
+                    EWoK uses a minimal pairs-of-pairs design, so each context can be plausible
+                    given one of two targets for an item. C1 (but not C2) is plausible with T1, and
+                    C2 (but not C1) is plausible with T2. With different combinations of concepts,
+                    contexts, and fillers, EWoK is capable of generating arbitrarily many controlled
+                    datasets, making EWoK widely useful for evaluation!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ TODO. -->
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- new section -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths"> <!-- is-five-fifths -->
+          <h2 class="title is-3">EWoK is hard for LLMs!</h2>
+          <div class="column is-one-fifths">
+            <img src="static/images/results_by_domain.svg" alt="" style="width: 100%;">
+          </div>
+          <div class="content has-text-justified">
+            <p>
+              LLM performance across domains (evaluated with LogProbs). The dotted line at 0.5
+              denotes chance accuracy. The light gray rectangle shows the range of human accuracy
+              across 5 dataset versions, with the light gray line showing the mean. Each dot
+              reflects LLM performance on a single version of EWoK-core-1.0, with the bar reflecting
+              the mean across the 5 versions. LLM performance varies drastically by domain and is
+              often substantially worse than human performance. In general, individual LLMs show
+              similar performance patterns across domains, but these patterns are not always
+              consistent with the human pattern.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ TODO. -->
+    </div>
+  </section>
+
+
+  <div class="content has-text-centered">
+    <img src="static/images/ewok-world-knowledge-1.jpeg"
+      alt="image of a 3D rendering of an EWoK pondering the elements of world knowledge; generated usinghttps://huggingface.co/ehristoforu/dalle-3-xl-v2 "
+      style="max-width: 30%; height: auto; border-radius: 3%;">
+  </div>
 
 
   <section class="section">
@@ -278,7 +431,6 @@
       <!--/ TODO. -->
     </div>
   </section>
-
 
 
 
@@ -311,7 +463,7 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@article{ivanova2024elements,
+      <pre><code class="language-python">@article{ivanova2024elements,
   author    = {Ivanova, Anna and Sathe, Aalok and Lipkin, Benjamin and Kumar, Unnathi and Radkani,
                 Setayesh and Clark, Thomas H and Kauf, Carina and Hu, Jennifer and RT, Pramod and
                 Grand, Gabriel and Paulun, Vivian and Ryskina, Maria and Akyurek, Ekin and Wilcox,
