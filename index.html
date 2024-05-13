@@ -211,7 +211,7 @@
     <div class="container is-max-desktop">
       <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths"> <!-- is-four-fifths -->
+        <div class="column is-three-fifths"> <!-- is-four-fifths -->
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
@@ -257,15 +257,49 @@
     </div>
   </section>
 
+
   <section class="section">
     <div class="container is-max-desktop">
-      <!-- TODO. -->
+      <!-- new section -->
       <div class="columns is-centered has-text-centered">
-        <div class="column is-five-fifths"> <!-- is-five-fifths -->
-          <h2 class="title is-3">Other Section</h2>
+        <div class="column is-four-fifths"> <!-- is-five-fifths -->
+          <h2 class="title is-3">Avenues for future research</h2>
           <div class="content has-text-justified">
             <p>
-              This is another section. We can add more sections as needed with text, images, etc.
+              EWoK is useful not only for evaluation, but allows for future targeted research on conceptual
+              understanding in LLMs. Our controlled items allow for causally manipulating the context shown to models
+              for the same target text, changing internal representations in a way that might lead to an opposite
+              judgment on the same text.
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ TODO. -->
+    </div>
+  </section>
+
+
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- new section -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths"> <!-- is-five-fifths -->
+          <h2 class="title is-3">Community Standard for Use of Evaluation Data</h2>
+          <div class="content has-text-justified">
+            <p>
+              In addition to doing the work of developing a novel evaluation framework and
+              challenging dataset to test world knowledge, we lay out best practices for evaluation
+              data use: our framework and dataset are CC-BY, (1)
+              requiring attribution if used to train LMs, and (2) prohibiting plain-text release on the internet to
+              prevent accidental inclusion in large training corpora.
+
+              We would like to promote a community standard of clearly reporting what models are trained on, and rightly
+              providing attribution where it is due---both, for careful science, and out of respect for the creative
+              work of others. You may notice we refrain from evaluating any closed API-only models for this reason.
+
             </p>
           </div>
         </div>
@@ -278,8 +312,13 @@
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>@article{ivanova2024elements,
-  author    = {Ivanova, Anna and Sathe, Aalok and Lipkin, Benjamin and Kumar, Unnathi and Radkani, Setayesh and Clark, Thomas H and Kauf, Carina and Hu, Jennifer and RT, Pramod and Grand, Gabriel and Paulun, Vivian and Ryskina, Maria and Akyurek, Ekin and Wilcox, Ethan and Rashid, Nafisa and Choshen, Leshem and Levy, Roger and Fedorenko, Evelina and Tenenbaum, Josh and Andreas, Jacob},
-  title     = {Elements of World Knowledge (EWoK): A cognition-inspired framework for evaluating basic world knowledge in language models},
+  author    = {Ivanova, Anna and Sathe, Aalok and Lipkin, Benjamin and Kumar, Unnathi and Radkani,
+                Setayesh and Clark, Thomas H and Kauf, Carina and Hu, Jennifer and RT, Pramod and
+                Grand, Gabriel and Paulun, Vivian and Ryskina, Maria and Akyurek, Ekin and Wilcox,
+                Ethan and Rashid, Nafisa and Choshen, Leshem and Levy, Roger and Fedorenko, Evelina
+                and Tenenbaum, Josh and Andreas, Jacob},
+  title     = {Elements of World Knowledge (EWoK): A cognition-inspired framework for evaluating
+                basic world knowledge in language models},
   journal   = {arXiv},
   year      = {2024},
 }</code></pre>
@@ -290,22 +329,24 @@
   <footer class="footer">
     <div class="container">
       <div class="content has-text-centered">
-        <a class="icon-link" href="">
+        <!-- <a class="icon-link" href="">
           <i class="fas fa-file-pdf"></i>
-        </a>
-        <a class="icon-link" href="" class="external-link" disabled>
+        </a> -->
+        <a class="icon-link" href="https://github.com/ewok-core" class="external-link" disabled>
           <i class="fab fa-github"></i>
         </a>
       </div>
       <div class="columns is-centered">
         <div class="column is-8">
           <div class="content">
-            <p>
+            <p>&copy; 2024, EWoK Contributors</p>
+
+            <p style="font-size: 8pt;">
               This website is licensed under a <a rel="license"
                 href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
                 Commons Attribution-ShareAlike 4.0 International License</a>.
-            </p>
-            <p>
+              <!-- </p>
+            <p style="font-size: 8pt;"> -->
               This means you are free to borrow the <a href="https://github.com/nerfies/nerfies.github.io">source
                 code</a> of this website,
               we just ask that you link back to this page in the footer.
