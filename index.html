@@ -171,27 +171,29 @@
             <div class="column has-text-centered">
               <div class="publication-links">
                 <!-- PDF Link. -->
-                <!-- <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span> -->
-                <!-- Arxiv Link. -->
                 <span class="link-block">
-                  <a href="https://ewok-core.github.io/paper" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://ewok-core.github.io/paper/ewok.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <!-- Arxiv Link. -->
+                <!-- <span class="link-block">
+                  <a href="https://ewok-core.github.io/paper/index.html"
+                    class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
                     </span>
                     <span>arXiv</span>
                   </a>
-                </span>
+                </span> -->
                 <!-- Code Link. -->
                 <span class="link-block">
-                  <a href="https://github.com/ewok-paper" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://github.com/ewok-core/ewok-paper"
+                    class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
@@ -227,56 +229,7 @@
     </div>
   </section>
 
-  <!-- <section class="section">
-    <div class="container is-max-desktop"> -->
-  <!-- Abstract. -->
-  <!-- <div class="columns is-centered has-text-centered">
-        <div class="column is-three-fifths"> 
-          <h2 class="title is-3">Abstract</h2>
-          <div class="content has-text-justified">
-            <p>
-              The ability to build and leverage world
-              models is essential for a general-purpose AI
-              agent. Testing such capabilities can be hard,
-              in part because the building blocks of world
-              models are ill-defined. Here, we present
-              Elements of World Knowledge (EWOK), a
-              framework for evaluating world modeling
-              in language models by testing their ability
-              to use knowledge of a concept to match
-              a target text with a plausible/implausible
-              context. EWOK targets specific concepts
-              from multiple knowledge domains, known
-              to be vital for world modeling in humans.
-              Domains range from social interactions
-              (help/hinder) to spatial relations (left/right).
-              Both contexts and targets are minimal pairs.
-              Objects, agents and locations in the items
-              can be flexibly filled in, enabling easy
-              generation of multiple controlled datasets.
-              We then introduce EWOK-CORE-1.0, a
-              dataset of 4,374 items covering 11 world
-              knowledge domains. We evaluate the
-              performance of 20 open-weights large
-              language models (ranging from 1.3B--70B
-              parameters) across a battery of evaluation
-              paradigms along with a human norming
-              study comprising 12,480 measurements.
-              The overall performance of all tested
-              models is worse than human performance,
-              with results varying drastically across
-              domains. These data highlight simple cases
-              in which even large models fail and present
-              rich avenues for targeted research on LLM
-              world modeling capabilities.
-            </p>
-          </div>
 
-        </div>
-      </div> -->
-  <!--/ Abstract. -->
-  <!-- </div>
-  </section> -->
 
   <div class="content has-text-centered">
     <img src="static/images/ewok-world-knowledge-2.webp"
@@ -344,6 +297,12 @@
               to generating many more carefully-controlled items than a single-step template-filling
               approach could generate.
             </p>
+            <img src="static/images/domains.svg" alt="">
+            <p>
+              Domains are inspired by literature in cognitive science. Many domains are shown by
+              past research in cognitive neuroscience to recruit dedicated machinery in the human
+              brain.
+            </p>
           </div>
         </div>
       </div>
@@ -389,28 +348,30 @@
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths"> <!-- is-five-fifths -->
           <h2 class="title is-3">EWoK is hard for LLMs!</h2>
-          <div class="column is-one-fifths">
-            <img src="static/images/results_by_domain.svg" alt="" style="width: 100%;">
-          </div>
           <div class="content has-text-justified">
+            <img src="static/images/results_by_domain.svg" alt="" style="width: 100%;">
             <p>
-              We then introduce EWOK-CORE-1.0, a
-              dataset of 4,374 items covering 11 world
-              knowledge domains. We evaluate the
-              performance of 20 open-weights large
-              language models (ranging from 1.3B--70B
-              parameters) across a battery of evaluation
-              paradigms along with a human norming
-              study comprising 12,480 measurements.
-
-              LLM performance across domains (evaluated with LogProbs). The dotted line at 0.5
-              denotes chance accuracy. The light gray rectangle shows the range of human accuracy
-              across 5 dataset versions, with the light gray line showing the mean. Each dot
-              reflects LLM performance on a single version of EWoK-core-1.0, with the bar reflecting
-              the mean across the 5 versions. LLM performance varies drastically by domain and is
-              often substantially worse than human performance. In general, individual LLMs show
-              similar performance patterns across domains, but these patterns are not always
-              consistent with the human pattern.
+              We evaluate 20 open-weights large language models (LLMs) on EWOK-CORE-1.0, a dataset of 4,374 items
+              covering 11 world knowledge domains. LLM performance varies drastically by domain and is often
+              substantially worse than human performance. Individual LLMs mostly show similar performance patterns
+              across domains, but these patterns are not always consistent with the human pattern.
+              In the figure, the dotted line at 0.5 denotes chance accuracy. The light gray rectangle shows the range of
+              human accuracy across 5 dataset versions, with the light gray line showing the mean. Each dot reflects LLM
+              performance on a single version of EWoK-core-1.0, with the bar reflecting the mean across the 5 versions.
+            </p>
+            <img src="static/images/results_by_evaltype.png" alt="" style="width: 100%;">
+            <p>
+              LLM performance assessed with LogProbs vs. two prompt-based tasks, Likert and Choice.
+              The prompting was 2-shot, and the outputs are constrained to allowed
+              values (1---5 for Likert, or {1, 2} for Choice); this setup was chosen to
+              maximize model performance. LogProbs is a better strategy in nearly all cases.
+              Within the two prompting tasks, it was common for models to always generate the same
+              value, e.g., “1”, for any item. Our metric was designed such that even in
+              this scenario, there would be a 50% baseline. Looking at Likert,
+              without this safeguard and requiring strict inequality, the top performing
+              Meta-LLama-3-70B model drops to 59%. MPT-7B, which performs comparably on LogProbs and
+              Choice, drops to 2%. Thus, these data are far from “solved” with prompting in the
+              general case.
             </p>
           </div>
         </div>
@@ -460,13 +421,17 @@
             <p>
               In addition to doing the work of developing a novel evaluation framework and
               challenging dataset to test world knowledge, we lay out best practices for evaluation
-              data use: our framework and dataset are CC-BY, (1)
-              requiring attribution if used to train LMs, and (2) prohibiting plain-text release on the internet to
-              prevent accidental inclusion in large training corpora.
+              data use: our framework and dataset are licensed <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY 4.0</a> with
+              <a href="https://github.com/ewok-core/ewok-paper/blob/main/TERMS_OF_USE.txt">Terms of Use</a>
+              (1) requiring attribution if used to train models, and (2) prohibiting plain-text
+              release of EWoK-generated data on the internet to prevent accidental inclusion in
+              large training corpora.
 
-              We would like to promote a community standard of clearly reporting what models are trained on, and rightly
-              providing attribution where it is due---both, for careful science, and out of respect for the creative
-              work of others. You may notice we refrain from evaluating any closed API-only models for this reason.
+              We would like to encourage a community standard of clearly reporting what models are
+              trained on, and appropriately providing attribution where it is due---both, for careful
+              science, and out of respect for the creative work of others. You may notice we refrain
+              from evaluating any closed API-only models for this reason.
 
             </p>
           </div>
@@ -511,8 +476,7 @@
 
             <p style="font-size: 8pt;">
               This website is licensed under a <a rel="license"
-                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-                Commons Attribution-ShareAlike 4.0 International License</a>.
+                href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0 International License</a>.
               <!-- </p>
             <p style="font-size: 8pt;"> -->
               This means you are free to borrow the <a href="https://github.com/nerfies/nerfies.github.io">source
